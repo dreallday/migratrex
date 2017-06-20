@@ -262,7 +262,7 @@ defmodule Mix.Tasks.Migratrex do
 
   defp required_columns(columns) do
     columns
-    |> Enum.filter(&(&1.is_nullable == false and &1.column_default == nil))
+    |> Enum.filter(&(&1.is_nullable == "NO" and &1.column_default == nil))
   end
 
   @field_types %{
