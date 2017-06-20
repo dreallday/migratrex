@@ -7,7 +7,7 @@ defmodule Migratrex.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps(),
+     deps: deps,
      name: "Migratrex",
      source_url: "https://github.com/dreallday/migratrex",
      description: "Build Ecto models and tests from existing database (Postgresql)",
@@ -32,7 +32,7 @@ defmodule Migratrex.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:ecto, "~> 2.0"},
+      {:ecto, "~> 2.1"},
       {:postgrex, ">= 0.0.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
